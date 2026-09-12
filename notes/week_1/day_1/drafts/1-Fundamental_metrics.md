@@ -1,0 +1,48 @@
+# Fundamental metrics: Observability Pilar
+
+## Metrics
+
+Metrics: are aggregated numbers that change along the time.
+
+RPS (Requests per second, throughput)
+Latency, media or percentis (p50, p95, p99)
+Erro rate
+Memocy and CPU Usage.
+Queues size.
+
+## Logs
+
+Logs: Text events that describe what happened in a specific moment.
+HTTTPs requests, execution erros, debug messages.
+
+## Traces
+
+Traces (Distributed tracking): show the completed way of a request through multiples services.
+
+
+Essential metrics (the four golden signals)
+Latency
+
+The time that takes to process a request.
+
+- p50 (media)= What tipicaly users can see, half of them are fast other are slow.
+- p95 = Antecipated alert of latency tail. 5% of the requests are worst than this.
+- p99 = Critical tail. The worst 1% of the requests, usually where conentratec the high value traffic.
+
+Note: User p50 to detec regression. p95 to adjust performance of the sistem and p99 to expose bottlenecks and discrepant values.
+
+
+
+### Traffic
+
+Traffic: Quantity of demand in the server, request per seconds RPS
+### Erros
+
+Erros: Request rate that failed or rate error that occurred in the application.
+### Saturation
+
+Saturation: How 'full' is the service, like CPU, memory, disk.
+
+ref:
+- https://csharpbrasil.com.br/observabilidade-os-tres-pilares-para-monitorar-aplicacoes-modernas
+- https://oneuptime.com/blog/post/2025-09-15-p50-vs-p95-vs-p99-latency-percentiles/view
