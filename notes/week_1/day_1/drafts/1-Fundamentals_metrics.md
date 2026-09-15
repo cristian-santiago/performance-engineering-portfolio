@@ -7,7 +7,7 @@ Metrics: are aggregated numbers that change along the time.
 RPS (Requests per second, throughput)
 Latency, media or percentis (p50, p95, p99)
 Erro rate
-Memocy and CPU Usage.
+Memory and CPU Usage.
 Queues size.
 
 ## Logs
