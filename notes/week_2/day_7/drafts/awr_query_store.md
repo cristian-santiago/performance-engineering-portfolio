@@ -10,6 +10,9 @@ Purpose:
 
 access via DBMS_WORKLOAD_REPOSITORY
 
+ASH (V$ACTIVE_SESSION_HISTORY) -> show each 1 second the exact timeline.
+AWR -> Aggregated snapshot of the period (1h). Top SQL, wait events, load profile etc.
+
 Query Store (SQL SERVER)
 
 Equals to AWR, keeps history queries, plans and statistics.
