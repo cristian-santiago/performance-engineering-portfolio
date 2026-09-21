@@ -38,6 +38,8 @@ COLUMN name FORMAT A15 (set 15 characteres for name)
 COLUMN email FORMAT A25 (set 25 characteres for email)
 COLUMN created_at FORMAT A12 (set 12 characteres for the data created)
 
+SET LINESIZE 200
+SET PAGESIZE 100
 
 
 
