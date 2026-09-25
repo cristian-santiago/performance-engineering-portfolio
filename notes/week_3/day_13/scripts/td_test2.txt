@@ -1,0 +1,379 @@
+1:
+2026-09-24 18:29:55
+Full thread dump OpenJDK 64-Bit Server VM (17.0.20+8 mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00007164f0bd9be0, length=32, elements={
+0x00007164f012b070, 0x00007164f012c450, 0x00007164f0131c20, 0x00007164f0132fd0,
+0x00007164f01343e0, 0x00007164f0135d90, 0x00007164f01372c0, 0x00007164f0140720,
+0x00007164f0147e50, 0x00007164f014b320, 0x00007164f020b420, 0x00007164f0bf94e0,
+0x000071642c26a0c0, 0x00007164f0bfb180, 0x00007164f0bfc170, 0x00007164f0bfd150,
+0x00007164f0bfe5d0, 0x00007164f0bffa60, 0x00007164f0c01080, 0x00007164f0c02520,
+0x00007164f0c039b0, 0x00007164f0c04d90, 0x00007164f0c05d80, 0x00007164f0bf5590,
+0x00007164f0e490b0, 0x00007164f0e4a8a0, 0x00007164f0029790, 0x000071642821c840,
+0x000071642835b3e0, 0x00007164283a5970, 0x000071640c15e630, 0x0000716468000e20
+}
+
+"Reference Handler" #2 daemon prio=10 os_prio=0 cpu=7.49ms elapsed=148657.85s tid=0x00007164f012b070 nid=0xe waiting on condition  [0x00007164c5caa000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@17.0.20/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@17.0.20/Reference.java:253)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@17.0.20/Reference.java:215)
+
+"Finalizer" #3 daemon prio=8 os_prio=0 cpu=0.42ms elapsed=148657.85s tid=0x00007164f012c450 nid=0xf in Object.wait()  [0x00007164c5baa000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@17.0.20/Native Method)
+	- waiting on <0x00000000844002e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(java.base@17.0.20/ReferenceQueue.java:155)
+	- locked <0x00000000844002e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(java.base@17.0.20/ReferenceQueue.java:176)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@17.0.20/Finalizer.java:172)
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=0 cpu=0.79ms elapsed=148657.84s tid=0x00007164f0131c20 nid=0x10 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #5 daemon prio=9 os_prio=0 cpu=56.42ms elapsed=148657.84s tid=0x00007164f0132fd0 nid=0x11 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #6 daemon prio=9 os_prio=0 cpu=16460.06ms elapsed=148657.84s tid=0x00007164f01343e0 nid=0x12 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #7 daemon prio=9 os_prio=0 cpu=14178.22ms elapsed=148657.84s tid=0x00007164f0135d90 nid=0x13 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #9 daemon prio=9 os_prio=0 cpu=4063.51ms elapsed=148657.84s tid=0x00007164f01372c0 nid=0x14 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Sweeper thread" #10 daemon prio=9 os_prio=0 cpu=170.50ms elapsed=148657.84s tid=0x00007164f0140720 nid=0x15 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Notification Thread" #11 daemon prio=9 os_prio=0 cpu=0.18ms elapsed=148657.84s tid=0x00007164f0147e50 nid=0x16 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #12 daemon prio=8 os_prio=0 cpu=103.32ms elapsed=148657.84s tid=0x00007164f014b320 nid=0x18 in Object.wait()  [0x00007164c4fbc000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@17.0.20/Native Method)
+	- waiting on <no object reference available>
+	at java.lang.ref.ReferenceQueue.remove(java.base@17.0.20/ReferenceQueue.java:155)
+	- locked <0x00000000844004a0> (a java.lang.ref.ReferenceQueue$Lock)
+	at jdk.internal.ref.CleanerImpl.run(java.base@17.0.20/CleanerImpl.java:140)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+	at jdk.internal.misc.InnocuousThread.run(java.base@17.0.20/InnocuousThread.java:162)
+
+"Cleaner-0" #13 daemon prio=8 os_prio=0 cpu=104.66ms elapsed=148657.74s tid=0x00007164f020b420 nid=0x19 in Object.wait()  [0x00007164c4ebc000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@17.0.20/Native Method)
+	- waiting on <no object reference available>
+	at java.lang.ref.ReferenceQueue.remove(java.base@17.0.20/ReferenceQueue.java:155)
+	- locked <0x0000000084400660> (a java.lang.ref.ReferenceQueue$Lock)
+	at jdk.internal.ref.CleanerImpl.run(java.base@17.0.20/CleanerImpl.java:140)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+	at jdk.internal.misc.InnocuousThread.run(java.base@17.0.20/InnocuousThread.java:162)
+
+"Catalina-utility-1" #18 prio=1 os_prio=0 cpu=10533.57ms elapsed=148653.54s tid=0x00007164f0bf94e0 nid=0x20 waiting on condition  [0x00007164c4aba000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@17.0.20/Native Method)
+	- parking to wait for  <0x00000000846001e8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@17.0.20/LockSupport.java:252)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@17.0.20/AbstractQueuedSynchronizer.java:1679)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@17.0.20/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@17.0.20/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@17.0.20/ThreadPoolExecutor.java:1062)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@17.0.20/ThreadPoolExecutor.java:1122)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@17.0.20/ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"Catalina-utility-2" #19 prio=1 os_prio=0 cpu=10742.70ms elapsed=148653.54s tid=0x000071642c26a0c0 nid=0x21 waiting on condition  [0x00007164c48b9000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@17.0.20/Native Method)
+	- parking to wait for  <0x00000000846001e8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@17.0.20/LockSupport.java:341)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@17.0.20/AbstractQueuedSynchronizer.java:506)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@17.0.20/ForkJoinPool.java:3465)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@17.0.20/ForkJoinPool.java:3436)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@17.0.20/AbstractQueuedSynchronizer.java:1630)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@17.0.20/ScheduledThreadPoolExecutor.java:1177)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@17.0.20/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@17.0.20/ThreadPoolExecutor.java:1062)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@17.0.20/ThreadPoolExecutor.java:1122)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@17.0.20/ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"http-nio-8080-exec-1" #20 daemon prio=5 os_prio=0 cpu=607.01ms elapsed=148653.54s tid=0x00007164f0bfb180 nid=0x22 waiting on condition  [0x00007164c47b9000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@17.0.20/Native Method)
+	- parking to wait for  <0x0000000084600748> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@17.0.20/LockSupport.java:341)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@17.0.20/AbstractQueuedSynchronizer.java:506)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@17.0.20/ForkJoinPool.java:3465)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@17.0.20/ForkJoinPool.java:3436)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@17.0.20/AbstractQueuedSynchronizer.java:1630)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@17.0.20/LinkedBlockingQueue.java:435)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"http-nio-8080-exec-2" #21 daemon prio=5 os_prio=0 cpu=34.19ms elapsed=148653.54s tid=0x00007164f0bfc170 nid=0x23 waiting on condition  [0x00007164c46b9000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@17.0.20/Native Method)
+	- parking to wait for  <0x0000000084600748> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@17.0.20/LockSupport.java:341)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@17.0.20/AbstractQueuedSynchronizer.java:506)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@17.0.20/ForkJoinPool.java:3465)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@17.0.20/ForkJoinPool.java:3436)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@17.0.20/AbstractQueuedSynchronizer.java:1630)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@17.0.20/LinkedBlockingQueue.java:435)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"http-nio-8080-exec-3" #22 daemon prio=5 os_prio=0 cpu=27.12ms elapsed=148653.54s tid=0x00007164f0bfd150 nid=0x24 waiting on condition  [0x00007164c45b9000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@17.0.20/Native Method)
+	- parking to wait for  <0x0000000084600748> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@17.0.20/LockSupport.java:341)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@17.0.20/AbstractQueuedSynchronizer.java:506)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@17.0.20/ForkJoinPool.java:3465)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@17.0.20/ForkJoinPool.java:3436)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@17.0.20/AbstractQueuedSynchronizer.java:1630)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@17.0.20/LinkedBlockingQueue.java:435)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"http-nio-8080-exec-4" #23 daemon prio=5 os_prio=0 cpu=36.99ms elapsed=148653.54s tid=0x00007164f0bfe5d0 nid=0x25 waiting on condition  [0x00007164c44b9000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@17.0.20/Native Method)
+	- parking to wait for  <0x0000000084600748> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@17.0.20/LockSupport.java:341)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@17.0.20/AbstractQueuedSynchronizer.java:506)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@17.0.20/ForkJoinPool.java:3465)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@17.0.20/ForkJoinPool.java:3436)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@17.0.20/AbstractQueuedSynchronizer.java:1630)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@17.0.20/LinkedBlockingQueue.java:435)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"http-nio-8080-exec-5" #24 daemon prio=5 os_prio=0 cpu=494.14ms elapsed=148653.53s tid=0x00007164f0bffa60 nid=0x26 waiting on condition  [0x00007164c43b9000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@17.0.20/Native Method)
+	- parking to wait for  <0x0000000084600748> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@17.0.20/LockSupport.java:341)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@17.0.20/AbstractQueuedSynchronizer.java:506)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@17.0.20/ForkJoinPool.java:3465)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@17.0.20/ForkJoinPool.java:3436)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@17.0.20/AbstractQueuedSynchronizer.java:1630)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@17.0.20/LinkedBlockingQueue.java:435)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"http-nio-8080-exec-6" #25 daemon prio=5 os_prio=0 cpu=271.50ms elapsed=148653.53s tid=0x00007164f0c01080 nid=0x27 waiting on condition  [0x00007164c42b9000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@17.0.20/Native Method)
+	- parking to wait for  <0x0000000084600748> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@17.0.20/LockSupport.java:341)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@17.0.20/AbstractQueuedSynchronizer.java:506)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@17.0.20/ForkJoinPool.java:3465)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@17.0.20/ForkJoinPool.java:3436)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@17.0.20/AbstractQueuedSynchronizer.java:1630)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@17.0.20/LinkedBlockingQueue.java:435)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"http-nio-8080-exec-7" #26 daemon prio=5 os_prio=0 cpu=10.41ms elapsed=148653.53s tid=0x00007164f0c02520 nid=0x28 waiting on condition  [0x00007164c41b9000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@17.0.20/Native Method)
+	- parking to wait for  <0x0000000084600748> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@17.0.20/LockSupport.java:341)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@17.0.20/AbstractQueuedSynchronizer.java:506)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@17.0.20/ForkJoinPool.java:3465)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@17.0.20/ForkJoinPool.java:3436)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@17.0.20/AbstractQueuedSynchronizer.java:1630)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@17.0.20/LinkedBlockingQueue.java:435)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"http-nio-8080-exec-8" #27 daemon prio=5 os_prio=0 cpu=9.75ms elapsed=148653.53s tid=0x00007164f0c039b0 nid=0x29 waiting on condition  [0x0000716472ffe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@17.0.20/Native Method)
+	- parking to wait for  <0x0000000084600748> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@17.0.20/LockSupport.java:341)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@17.0.20/AbstractQueuedSynchronizer.java:506)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@17.0.20/ForkJoinPool.java:3465)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@17.0.20/ForkJoinPool.java:3436)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@17.0.20/AbstractQueuedSynchronizer.java:1630)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@17.0.20/LinkedBlockingQueue.java:435)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"http-nio-8080-exec-9" #28 daemon prio=5 os_prio=0 cpu=9.61ms elapsed=148653.53s tid=0x00007164f0c04d90 nid=0x2a waiting on condition  [0x0000716472efe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@17.0.20/Native Method)
+	- parking to wait for  <0x0000000084600748> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@17.0.20/LockSupport.java:341)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@17.0.20/AbstractQueuedSynchronizer.java:506)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@17.0.20/ForkJoinPool.java:3465)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@17.0.20/ForkJoinPool.java:3436)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@17.0.20/AbstractQueuedSynchronizer.java:1630)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@17.0.20/LinkedBlockingQueue.java:435)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"http-nio-8080-exec-10" #29 daemon prio=5 os_prio=0 cpu=9.96ms elapsed=148653.53s tid=0x00007164f0c05d80 nid=0x2b waiting on condition  [0x0000716472dfe000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@17.0.20/Native Method)
+	- parking to wait for  <0x0000000084600748> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@17.0.20/LockSupport.java:341)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@17.0.20/AbstractQueuedSynchronizer.java:506)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@17.0.20/ForkJoinPool.java:3465)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@17.0.20/ForkJoinPool.java:3436)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@17.0.20/AbstractQueuedSynchronizer.java:1630)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@17.0.20/LinkedBlockingQueue.java:435)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:117)
+	at org.apache.tomcat.util.threads.TaskQueue.take(TaskQueue.java:33)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1114)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1175)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"container-0" #30 prio=5 os_prio=0 cpu=558.35ms elapsed=148653.52s tid=0x00007164f0bf5590 nid=0x2c waiting on condition  [0x0000716472cfe000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(java.base@17.0.20/Native Method)
+	at org.apache.catalina.core.StandardServer.await(StandardServer.java:524)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer$1.run(TomcatWebServer.java:219)
+
+"http-nio-8080-Poller" #31 daemon prio=5 os_prio=0 cpu=5920.97ms elapsed=148652.62s tid=0x00007164f0e490b0 nid=0x2d runnable  [0x0000716472a1c000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPoll.wait(java.base@17.0.20/Native Method)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(java.base@17.0.20/EPollSelectorImpl.java:118)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(java.base@17.0.20/SelectorImpl.java:129)
+	- locked <0x00000000846082f0> (a sun.nio.ch.Util$2)
+	- locked <0x0000000084607e78> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(java.base@17.0.20/SelectorImpl.java:141)
+	at org.apache.tomcat.util.net.NioEndpoint$Poller.run(NioEndpoint.java:755)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"http-nio-8080-Acceptor" #32 daemon prio=5 os_prio=0 cpu=18.47ms elapsed=148652.61s tid=0x00007164f0e4a8a0 nid=0x2e runnable  [0x000071647291c000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.Net.accept(java.base@17.0.20/Native Method)
+	at sun.nio.ch.ServerSocketChannelImpl.implAccept(java.base@17.0.20/ServerSocketChannelImpl.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(java.base@17.0.20/ServerSocketChannelImpl.java:391)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:518)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:128)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"DestroyJavaVM" #33 prio=5 os_prio=0 cpu=4317.93ms elapsed=148652.57s tid=0x00007164f0029790 nid=0x7 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"oracle.jdbc.diagnostics.Diagnostic.CLOCK" #34 daemon prio=5 os_prio=0 cpu=6390.74ms elapsed=148646.81s tid=0x000071642821c840 nid=0x30 in Object.wait()  [0x0000716472bfe000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@17.0.20/Native Method)
+	- waiting on <no object reference available>
+	at java.util.TimerThread.mainLoop(java.base@17.0.20/Timer.java:563)
+	- locked <0x00000000851ee778> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(java.base@17.0.20/Timer.java:516)
+
+"oracle.jdbc.driver.BlockSource.ThreadedCachingBlockSource.BlockReleaser" #35 daemon prio=4 os_prio=0 cpu=49.18ms elapsed=148646.81s tid=0x000071642835b3e0 nid=0x31 waiting on condition  [0x000071647281c000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@17.0.20/Native Method)
+	- parking to wait for  <0x00000000851f7ac0> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@17.0.20/LockSupport.java:252)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@17.0.20/AbstractQueuedSynchronizer.java:1679)
+	at oracle.jdbc.internal.Monitor$WaitableMonitor.monitorWait(Monitor.java:324)
+	at oracle.jdbc.internal.Monitor$WaitableMonitor.monitorWait(Monitor.java:306)
+	at oracle.jdbc.driver.BlockSource$ThreadedCachingBlockSource$BlockReleaser.run(BlockSource.java:346)
+
+"InterruptTimer" #36 daemon prio=5 os_prio=0 cpu=5460.23ms elapsed=148646.73s tid=0x00007164283a5970 nid=0x32 in Object.wait()  [0x000071647271c000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@17.0.20/Native Method)
+	- waiting on <no object reference available>
+	at java.util.TimerThread.mainLoop(java.base@17.0.20/Timer.java:563)
+	- locked <0x0000000085200178> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(java.base@17.0.20/Timer.java:516)
+
+"HikariPool-1 housekeeper" #38 daemon prio=5 os_prio=0 cpu=618.95ms elapsed=148568.53s tid=0x000071640c15e630 nid=0x35 waiting on condition  [0x000071647261c000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@17.0.20/Native Method)
+	- parking to wait for  <0x0000000085209348> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@17.0.20/LockSupport.java:252)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@17.0.20/AbstractQueuedSynchronizer.java:1679)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@17.0.20/ScheduledThreadPoolExecutor.java:1182)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(java.base@17.0.20/ScheduledThreadPoolExecutor.java:899)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@17.0.20/ThreadPoolExecutor.java:1062)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@17.0.20/ThreadPoolExecutor.java:1122)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@17.0.20/ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"Attach Listener" #51 daemon prio=9 os_prio=0 cpu=1.97ms elapsed=145919.17s tid=0x0000716468000e20 nid=0x75 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"GC Thread#3" os_prio=0 cpu=121.03ms elapsed=148656.39s tid=0x00007164bc00b530 nid=0x1e runnable  
+
+"GC Thread#2" os_prio=0 cpu=142.67ms elapsed=148657.38s tid=0x00007164bc0058c0 nid=0x1c runnable  
+
+"GC Thread#1" os_prio=0 cpu=127.09ms elapsed=148657.38s tid=0x00007164bc004ec0 nid=0x1b runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=83122.16ms elapsed=148657.84s tid=0x00007164f0149790 nid=0x17 waiting on condition  
+
+"VM Thread" os_prio=0 cpu=4366.44ms elapsed=148657.85s tid=0x00007164f01270a0 nid=0xd runnable  
+
+"G1 Service" os_prio=0 cpu=26362.75ms elapsed=148657.89s tid=0x00007164f00fa940 nid=0xc runnable  
+
+"G1 Refine#0" os_prio=0 cpu=5.91ms elapsed=148657.89s tid=0x00007164f00f9a40 nid=0xb runnable  
+
+"G1 Conc#0" os_prio=0 cpu=45.18ms elapsed=148657.89s tid=0x00007164f0095340 nid=0xa runnable  
+
+"G1 Main Marker" os_prio=0 cpu=0.80ms elapsed=148657.89s tid=0x00007164f00943d0 nid=0x9 runnable  
+
+"GC Thread#0" os_prio=0 cpu=144.14ms elapsed=148657.89s tid=0x00007164f0083660 nid=0x8 runnable  
+
+JNI global refs: 16, weak refs: 0
+

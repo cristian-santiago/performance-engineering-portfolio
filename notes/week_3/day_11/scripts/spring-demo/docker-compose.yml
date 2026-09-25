@@ -1,0 +1,24 @@
+services:
+  oracle:
+    image: container-registry.oracle.com/database/express:21.3.0-xe
+    container_name: oracle-xe
+    ports:
+      - "1521:1521"
+    environment:
+      - ORACLE_PWD=Oracle123
+    networks:
+      - pe-net
+
+  app:
+    build: .
+    container_name: spring-demo
+    ports:
+      - "8080:8080"
+    depends_on:
+      - oracle
+    networks:
+      - pe-net
+
+networks:
+  pe-net:
+    driver: bridge
